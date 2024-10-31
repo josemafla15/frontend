@@ -1,0 +1,33 @@
+<div class="container-fluid">
+    <h3>
+        Lista de usuarios
+    </h3>
+    <div class="col-12">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Contraseña</th>
+                    <th>Fecha de nacimiento</th>
+                    <th>Email</th>
+                    <th>Pais de origen</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let v of usuarios">
+                    <td>{{v.nombre}}</td>
+                    <td>{{v.contrasena}}</td>
+                    <td>{{v.fechaNacimiento}}</td>
+                    <td>{{v.email}}</td>
+                    <td>{{v.paisOrigen}}</td>
+                    <td>
+                        <button type="button" class="btn btn-primary" (click)="onEditarNavigate(v.id)" title="Editar">
+                            Editar
+                        </button>&nbsp;
+                    </td>
+                </tr>
+            </tbody>
+                
+        </table>
+    </div>
+</div>
